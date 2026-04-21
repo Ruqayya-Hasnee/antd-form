@@ -2,6 +2,10 @@
 
 import { Col, DatePicker, Form, Row, Select } from "antd"
 
+const contactPersonOptions = [
+  { label: "Hassan Ali Abbas", value: "Hassan Ali Abbas" },
+]
+
 export default function ContactPersonDetails() {
   return (
     <div className="w-full bg-gray-100 p-4 border border-gray-200 rounded-xl">
@@ -9,7 +13,7 @@ export default function ContactPersonDetails() {
       <Row gutter={[16, 16]}>
         <Col xs={24} sm={12} md={8} lg={4}>
           <Form.Item label="Contact Person" name="contactPerson">
-            <Select options={[{ label: "Hassan Ali Abbas", value: "Hassan Ali Abbas" }]} />
+            <Select options={contactPersonOptions} placeholder="Select contact person" />
           </Form.Item>
         </Col>
         <Col xs={24} sm={12} md={8} lg={4}>
