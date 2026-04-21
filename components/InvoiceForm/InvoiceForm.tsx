@@ -30,18 +30,26 @@ const initialValues = {
 
   contactPerson: "Hassan Ali Abbas",
 
-  product: "Rolex Watch",
-  rate: "2,750.00",
-  qty: "01",
-  amount: "2,750.00",
-  productDescription: "Rolex Daytona | Ref 16573 | SNR NT17695",
+  products: [
+    {
+      product: "Rolex Watch",
+      rate: "2,750.00",
+      qty: "01",
+      amount: "2,750.00",
+      description: "Rolex Daytona | Ref 16573 | SNR NT17695",
+    },
+  ],
 
-  bankCompanyName: "Sativai Habitual Unbearout LDR",
-  bankName: "WISE",
-  iban: "GB90 TRWI 6084 6167 5097 22",
-  sortCode: "60-84-84",
-  accountNumber: "57500722",
-  swift: "TRWIGB2LXXX",
+  banks: [
+    {
+      companyName: "Sativai Habitual Unbearout LDR",
+      bankName: "WISE",
+      iban: "GB90 TRWI 6084 6167 5097 22",
+      sortCode: "60-84-84",
+      accountNumber: "57500722",
+      swift: "TRWIGB2LXXX",
+    },
+  ],
 
   termsDescription: "Rolex Daytona | Ref 16573 | SNR NT17695",
 }
