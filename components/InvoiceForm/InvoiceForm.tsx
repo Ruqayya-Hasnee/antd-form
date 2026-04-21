@@ -56,6 +56,7 @@ export default function InvoiceForm() {
   return (
     <ConfigProvider theme={{ token: { colorPrimary: "#f59e0b" } }}>
       <div className="w-full p-4">
+        <FormHeader />
         <Form
           form={form}
           layout="vertical"
@@ -63,7 +64,6 @@ export default function InvoiceForm() {
           initialValues={initialValues}
         >
           <div className="flex flex-col gap-4 p-4">
-            <FormHeader />
             <CompanyDetails />
             <InvoiceDetail />
             <ContactPersonDetails />
