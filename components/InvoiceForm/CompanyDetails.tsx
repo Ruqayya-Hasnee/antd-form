@@ -9,32 +9,32 @@ export default function CompanyDetails() {
       <Row gutter={[16, 16]}>
         <Col xs={24} sm={12} md={8} lg={4}>
           <Form.Item label="Company" name="company">
-            <Input />
+            <Input placeholder="Enter company name" />
           </Form.Item>
         </Col>
         <Col xs={24} sm={12} md={8} lg={4}>
           <Form.Item label="Website" name="companyWebsite">
-            <Input />
+            <Input placeholder="Please enter website URL" />
           </Form.Item>
         </Col>
         <Col xs={24} sm={12} md={8} lg={4}>
           <Form.Item label="Email" name="companyEmail">
-            <Input />
+            <Input placeholder="email@example.com" />
           </Form.Item>
         </Col>
         <Col xs={24} sm={12} md={8} lg={4}>
           <Form.Item label="Phone no" name="companyPhone">
-            <Input />
+            <Input placeholder="+44 000 000 0000" />
           </Form.Item>
         </Col>
         <Col xs={24} sm={12} md={8} lg={4}>
           <Form.Item label="Registration no" name="companyReg">
-            <Input />
+            <Input placeholder="Enter registration number" />
           </Form.Item>
         </Col>
         <Col xs={24} sm={12} md={8} lg={4}>
           <Form.Item label="Business Address" name="companyAddress">
-            <Input />
+            <Input placeholder="Enter business address" />
           </Form.Item>
         </Col>
       </Row>
