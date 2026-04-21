@@ -9,6 +9,43 @@ import ProductDetails from "./ProductDetails"
 import BankDetails from "./BankDetails"
 import TermsConditions from "./TermsConditions"
 
+const initialValues = {
+  company: "Watch portal",
+  companyWebsite: "www.watchtrader.co.uk",
+  companyEmail: "enquiries@watchtrader.co.uk",
+  companyPhone: "0191 281 4976",
+  companyReg: "12133403",
+  companyAddress: "20-22 Bridge End, Leeds, West Yorkshire",
+
+  invoiceTo: "WATCH EVOLUTION SRL",
+  invoiceNumber: "Invoice INV-1037",
+  invoiceEmail: "evolutionsrl.ar@gmail.com",
+  invoiceWebsite: "www.watchevolution.it",
+  invoicePhone: "0039 3454433718",
+  invoiceCodeSdi: "Cod. Sdi : M5UXCR1",
+  invoiceVatNumber: "P. I. 02337120519",
+  invoiceAddress: "52100 Arezzo",
+  invoiceAddress2: "Via Guido Monaco 56",
+  invoiceTax: "10%",
+
+  contactPerson: "Hassan Ali Abbas",
+
+  product: "Rolex Watch",
+  rate: "2,750.00",
+  qty: "01",
+  amount: "2,750.00",
+  productDescription: "Rolex Daytona | Ref 16573 | SNR NT17695",
+
+  bankCompanyName: "Sativai Habitual Unbearout LDR",
+  bankName: "WISE",
+  iban: "GB90 TRWI 6084 6167 5097 22",
+  sortCode: "60-84-84",
+  accountNumber: "57500722",
+  swift: "TRWIGB2LXXX",
+
+  termsDescription: "Rolex Daytona | Ref 16573 | SNR NT17695",
+}
+
 export default function InvoiceForm() {
   const [form] = Form.useForm()
 
@@ -23,42 +60,7 @@ export default function InvoiceForm() {
           form={form}
           layout="vertical"
           onFinish={handleSubmit}
-          initialValues={{
-            company: "Watch portal",
-            companyWebsite: "www.watchtrader.co.uk",
-            companyEmail: "enquiries@watchtrader.co.uk",
-            companyPhone: "0191 281 4976",
-            companyReg: "12133403",
-            companyAddress: "20-22 Bridge End, Leeds, West Yorkshire",
-
-            invoiceTo: "WATCH EVOLUTION SRL",
-            invoiceNumber: "Invoice INV-1037",
-            invoiceEmail: "evolutionsrl.ar@gmail.com",
-            invoiceWebsite: "www.watchevolution.it",
-            invoicePhone: "0039 3454433718",
-            invoiceCodeSdi: "Cod. Sdi : M5UXCR1",
-            invoiceVatNumber: "P. I. 02337120519",
-            invoiceAddress: "52100 Arezzo",
-            invoiceAddress2: "Via Guido Monaco 56",
-            invoiceTax: "10%",
-
-            contactPerson: "Hassan Ali Abbas",
-
-            product: "Rolex Watch",
-            rate: "2,750.00",
-            qty: "01",
-            amount: "2,750.00",
-            productDescription: "Rolex Daytona | Ref 16573 | SNR NT17695",
-
-            bankCompanyName: "Sativai Habitual Unbearout LDR",
-            bankName: "WISE",
-            iban: "GB90 TRWI 6084 6167 5097 22",
-            sortCode: "60-84-84",
-            accountNumber: "57500722",
-            swift: "TRWIGB2LXXX",
-
-            termsDescription: "Rolex Daytona | Ref 16573 | SNR NT17695",
-          }}
+          initialValues={initialValues}
         >
           <div className="flex flex-col gap-4 p-4">
             <FormHeader />
