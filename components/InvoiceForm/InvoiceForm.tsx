@@ -1,6 +1,6 @@
 "use client"
 
-import { Button, ConfigProvider, Form } from "antd"
+import { Button, Form } from "antd"
 import FormHeader from "./FormHeader"
 import CompanyDetails from "./CompanyDetails"
 import InvoiceDetail from "./InvoiceDetail"
@@ -62,30 +62,28 @@ export default function InvoiceForm() {
   }
 
   return (
-    <ConfigProvider theme={{ token: { colorPrimary: "#f59e0b" } }}>
-      <div className="w-full p-4">
-        <FormHeader />
-        <Form
-          form={form}
-          layout="vertical"
-          onFinish={handleSubmit}
-          initialValues={initialValues}
-        >
-          <div className="flex flex-col gap-4 p-4">
-            <CompanyDetails />
-            <InvoiceDetail />
-            <ContactPersonDetails />
-            <ProductDetails />
-            <BankDetails />
-            <TermsConditions />
-            <div className="flex justify-end">
-              <Button type="primary" htmlType="submit">
-                Save
-              </Button>
-            </div>
+    <div className="w-full p-4">
+      <FormHeader />
+      <Form
+        form={form}
+        layout="vertical"
+        onFinish={handleSubmit}
+        initialValues={initialValues}
+      >
+        <div className="flex flex-col gap-4 p-4">
+          <CompanyDetails />
+          <InvoiceDetail />
+          <ContactPersonDetails />
+          <ProductDetails />
+          <BankDetails />
+          <TermsConditions />
+          <div className="flex justify-end">
+            <Button type="primary" htmlType="submit">
+              Save
+            </Button>
           </div>
-        </Form>
-      </div>
-    </ConfigProvider>
+        </div>
+      </Form>
+    </div>
   )
 }
