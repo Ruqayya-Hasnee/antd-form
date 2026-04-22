@@ -13,13 +13,13 @@ const qtyOptions = ["01", "02", "03", "04", "05"].map((v) => ({ label: v, value:
 export default function ProductDetails() {
   return (
     <div className="w-full bg-gray-100 p-4 border border-gray-200 rounded-xl">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-base font-medium text-gray-700">Product Details</h2>
-        <Button type="primary">+ Add Items</Button>
-      </div>
       <Form.List name="products">
-        {(fields) => (
+        {(fields, { add, remove }) => (
           <>
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-base font-medium text-gray-700">Product Details</h2>
+              <Button type="primary" onClick={() => add()}>+ Add Items</Button>
+            </div>
             {fields.map(({ key, name }) => (
               <div key={key}>
                 <Row gutter={[16, 16]}>
@@ -51,6 +51,9 @@ export default function ProductDetails() {
                     </Form.Item>
                   </Col>
                 </Row>
+                <div className="flex justify-end mb-4">
+                  <Button danger onClick={() => remove(name)}>Remove</Button>
+                </div>
               </div>
             ))}
           </>
